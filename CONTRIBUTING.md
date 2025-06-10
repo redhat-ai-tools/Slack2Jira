@@ -83,7 +83,7 @@ Types:
 
 1. **Clone your fork**:
    ```bash
-   git clone https://github.com/your-username/Slack2Jira.git
+   git clone https://github.com/redhat-ai-tools/Slack2Jira.git
    cd Slack2Jira
    ```
 

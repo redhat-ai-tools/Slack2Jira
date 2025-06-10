@@ -68,7 +68,7 @@ Before using this workflow agent, ensure you have:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/Slack2Jira.git
+   git clone https://github.com/redhat-ai-tools/Slack2Jira.git
    cd Slack2Jira
    ```
 
