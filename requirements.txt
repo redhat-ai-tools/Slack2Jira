@@ -1,0 +1,12 @@
+# Core dependencies for Slack2Jira Workflow Agent
+llama-stack-client>=0.0.53
+python-dotenv>=1.0.0
+termcolor>=2.3.0
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Optional dependencies
+tavily-python>=0.3.0
+
+# Development dependencies
+notebook>=7.0.0 
