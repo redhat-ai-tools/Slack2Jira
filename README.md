@@ -21,6 +21,7 @@ This project creates an integration layer between Slack and Jira MCPs, enabling 
 ## 🏗️ Architecture
 
 The system uses:
+
 - **Slack MCP Server**: Retrieves discussion content from Slack channels and threads
 - **Jira MCP Server**: Creates and manages Jira issues, including linking stories to epics
 - **Llama Stack**: Orchestrates the workflow and provides intelligent analysis
@@ -29,9 +30,11 @@ The system uses:
 ## 📋 Use Cases
 
 ### Primary Use Case
+
 Analyze Slack discussion threads, extract key information about technical issues or feature requests, create well-structured Jira stories with appropriate fields, and link them to specified epics.
 
 ### What the Agent Does
+
 1. **Extract Information**: Identifies main technical issues, bug reports, or feature requests
 2. **Analyze Details**: Captures problem descriptions, reproduction steps, error messages, and proposed solutions
 3. **Create Jira Stories**: Generates professional, well-formatted stories with:
@@ -41,6 +44,7 @@ Analyze Slack discussion threads, extract key information about technical issues
    - Appropriate issue types and project assignments
 
 ### Fields Automatically Populated
+
 - **Summary**: Clear, concise title based on discussion
 - **Description**: Detailed context from Slack thread
 - **Actual Result**: What's currently happening (if discussed)
@@ -48,6 +52,7 @@ Analyze Slack discussion threads, extract key information about technical issues
 - **Epic Link**: Automatic linking to specified epics
 
 ### Fields for Manual Completion
+
 - **How Reproducible**: To be filled by QE/Developer
 - **Steps to Reproduce**: To be filled by QE/Developer
 
@@ -67,23 +72,27 @@ Before using this workflow agent, ensure you have:
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/redhat-ai-tools/Slack2Jira.git
    cd Slack2Jira
    ```
 
 2. **Install dependencies**:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Set up environment variables**:
+
    ```bash
    cp .env.example .env
    # Edit .env with your configuration
    ```
 
 4. **Configure your `.env` file**:
+
    ```env
    REMOTE_BASE_URL=your_llama_stack_url
    REMOTE_SLACK_MCP_URL=your_slack_mcp_endpoint
@@ -97,11 +106,13 @@ Before using this workflow agent, ensure you have:
 ### Quick Start
 
 1. **Open the Jupyter notebook**:
+
    ```bash
    jupyter notebook Slack2Jira_Workflow_Agent.ipynb
    ```
 
 2. **Configure your workflow parameters**:
+
    ```python
    SLACK_CHANNEL_ID = "your_channel_id"
    SLACK_THREAD_TS = "thread_timestamp"
@@ -225,6 +236,10 @@ When analyzing Slack discussions, you should:
 3. Create clear, concise summaries for Jira story titles
 4. Write detailed descriptions with Slack discussion context
 5. Link stories to appropriate epics when specified
+6. Format Jira description with proper titles and bullets when needed. Format errors, logs, and special keywords in code blocks or preformatted text for better readability
+7. Add labels based on discussion topics and team assignments
+8. Set appropriate assignees based on discussion participants. Use full email addresses for assignees
+9. Set priority and severity based on discussion urgency and impact
 """
 ```
 
@@ -248,10 +263,23 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 ## 🔗 Resources
 
 - [Project Documentation](https://docs.google.com/document/d/1JNdvWRqqO6ZmzfGQbMCbB2qG5Qpy4Fs5ftviRT_bMhQ/edit?tab=t.0#heading=h.eqn641rxzrve)
-- [Slack MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/slack)
+- [Slack MCP Server](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack)
 - [Jira MCP Server](https://github.com/sooperset/mcp-atlassian)
 - [Llama Stack Documentation](https://github.com/meta-llama/llama-stack)
 - [Model Context Protocol](https://github.com/modelcontextprotocol)
+
+## 👥 Project Team
+
+The Slack2Jira Workflow Agent is actively maintained and developed by the following core team members. We are grateful for their dedication and leadership.
+
+- **[Carmel Soceanu](https://github.com/csoceanu)**
+- **[Lubov Shilin](https://github.com/lshilin-r)**
+- **[Maxim Alter](https://github.com/maximunited)**
+- **[Omer Turner (Amsalem)](https://github.com/Omeramsc)**
+- **[Polina Rabinovich](https://github.com/prabinovRedhat)**
+- **[Udi Greener](https://github.com/ugreener)**
+
+We also deeply appreciate contributions from the wider community!
 
 ## 🏆 Acknowledgments
 
@@ -259,4 +287,4 @@ This project was developed as part of the AI MCP Israeli Hackathon, demonstratin
 
 ---
 
-**Built with ❤️ using Llama Stack and MCP Tools**
+***Built with ❤️ using Llama Stack and MCP Tools***

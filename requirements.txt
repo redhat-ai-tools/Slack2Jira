@@ -10,3 +10,4 @@ tavily-python>=0.3.0
 
 # Development dependencies
 notebook>=7.0.0 
+fire>=0.7.0
